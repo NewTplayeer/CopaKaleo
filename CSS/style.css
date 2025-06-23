@@ -1,9 +1,35 @@
-/* Estilos gerais para o corpo da página */
 body {
     font-family: 'Roboto', sans-serif; /* Define a fonte principal para todo o texto da página */
     margin: 0; /* Remove a margem padrão do navegador em todos os lados */
     padding: 0; /* Remove o preenchimento padrão do navegador em todos os lados */
-    background-color: #f4f4f4; /* Define a cor de fundo da página (um cinza claro) */
+    /* background-color: #f4f4f4; */ /* Você pode remover ou comentar esta linha se a imagem de fundo cobrir tudo */
+
+    /* --- PROPRIEDADES PARA A IMAGEM DE FUNDO --- */
+    background-image: url('../IMG/IMG\ DE\ FUNDO.jpg'); /* Define a imagem de fundo. Ajuste o caminho se necessário! */
+    background-size: cover; /* Faz a imagem cobrir toda a área do body, cortando se necessário para preencher */
+    /* Outras opções para background-size:
+       - 'contain': Redimensiona a imagem para caber inteira, pode deixar espaços vazios.
+       - '100% 100%': Estica a imagem para preencher completamente, pode distorcê-la.
+       - 'auto': Tamanho original da imagem.
+    */
+    background-position: center center; /* Centraliza a imagem de fundo horizontal e verticalmente */
+    /* Outras opções para background-position:
+       - 'top center', 'bottom left', etc.
+       - '50% 50%' (equivalente a center center)
+    */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    /* Outras opções para background-repeat:
+       - 'repeat': Repete a imagem para cobrir toda a área (padrão).
+       - 'repeat-x': Repete horizontalmente.
+       - 'repeat-y': Repete verticalmente.
+    */
+    background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
+    /* Outras opções para background-attachment:
+       - 'scroll': A imagem rola com o conteúdo (padrão).
+    */
+    /* --- FIM DAS PROPRIEDADES PARA A IMAGEM DE FUNDO --- */
+
+
     display: flex; /* Habilita o Flexbox para alinhar o conteúdo principal */
     justify-content: center; /* Centraliza o conteúdo horizontalmente no body */
     align-items: flex-start; /* Alinha o conteúdo ao topo da página */

@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Cor de fundo suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espaço entre a logo e os cards */
+    padding: 20px;
+    max-width: 900px; /* Largura máxima do conteúdo */
+    width: 100%;
+}
+
+.logo-container {
+    width: 200px; /* Largura do círculo */
+    height: 200px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o elemento ser um círculo */
+    background-color: #ffffff; /* Fundo branco para a logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    overflow: hidden; /* Garante que a logo não "estoure" o círculo */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+.logo {
+    max-width: 80%; /* Ajusta o tamanho da logo dentro do círculo */
+    max-height: 80%;
+    border-radius: 50%; /* Se a sua logo já for circular, isso ajuda a manter */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo com cards */
+    gap: 25px; /* Espaço entre os cards */
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #007bff; /* Cor azul para os títulos dos cards */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366; /* Cor verde do WhatsApp */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px; /* Cantos arredondados para o botão */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851; /* Tom mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Pequeno zoom no botão */
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .container {
+        gap: 30px;
+        padding: 15px;
+    }
+    .logo-container {
+        width: 160px;
+        height: 160px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .card h3 {
+        font-size: 1.4em;
+    }
+    .card p {
+        font-size: 1em;
+    }
+    .whatsapp-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        width: 140px;
+        height: 140px;
+    }
+}
